@@ -1,0 +1,48 @@
+<div>
+
+    <mat-card>
+        
+        <mat-grid-list cols="5" rowHeight="35px">
+
+            <mat-grid-tile [colspan]="1" [rowspan]="2">
+
+                <div class="avatar">
+                    <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" class="img">
+                </div>
+                
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="3" [rowspan]="1">
+
+                <mat-label class="label-name_player">
+                    Nombre del jugador
+                </mat-label>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                
+                <div class="div-team">
+                    <img src="../../../../assets/img/Real-madrid.png" class="img-team">
+                </div>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                
+                <mat-label class="label-name_player">
+                    Avg del jugador
+                </mat-label>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1" style="background: purple;">
+
+                <button mat-button color="primary">Ver mas</button>
+
+            </mat-grid-tile>
+        </mat-grid-list>
+
+    </mat-card>
+
+</div>
