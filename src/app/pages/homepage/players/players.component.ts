@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-players',
@@ -8,16 +7,11 @@ import { FormControl } from '@angular/forms';
 })
 export class PlayersComponent implements OnInit {
 
-  labelPosition: 'before' | 'after' = 'after';
-
-  topping: FormControl;
-
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  public tiles: any
 
   constructor() { }
 
   ngOnInit(): void {
-   /*  this.toppings = new FormControl(); */
   }
 
 }

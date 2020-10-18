@@ -10,9 +10,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [],
@@ -29,10 +33,14 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     FormsModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [MatCardModule, MatButtonModule, MatGridListModule, MatTabsModule, MatToolbarModule,
             MatInputModule, MatIconModule, MatFormFieldModule, FormsModule, MatCheckboxModule,
-            MatSelectModule]
+            MatSelectModule, ReactiveFormsModule, MatExpansionModule, MatTableModule, MatPaginatorModule]
 })
 export class AngularMaterialModule { }

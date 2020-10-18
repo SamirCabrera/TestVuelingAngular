@@ -2,7 +2,7 @@
 
     <mat-grid-list cols="4" rowHeight="100px">
 
-        <mat-grid-tile [colspan]="3" [rowspan]="6" class="mat-grid-list-card">
+        <mat-grid-tile [colspan]="3" [rowspan]="7" class="mat-grid-list-card">
 
             <div class="container-card">
 
@@ -211,56 +211,102 @@
 
         </mat-grid-tile>
 
-        <mat-grid-tile [colspan]="1" [rowspan]="6" class="mat-grid-list-statistics">
+        <mat-grid-tile [colspan]="1" [rowspan]="7" class="mat-grid-list-statistics">
 
-            <div class="container-statistics">
+          <div>
+            <div class="div-container-statistics">
+              <div class="container-statistics">
                 <div class="statistics-description">
-
+  
                     <div class="div-icon">
                         <mat-icon aria-hidden="false" aria-label="Example home icon">sports_soccer</mat-icon>
                     </div>
-
+  
                     <div class="div-label">
                         <mat-label>94</mat-label>
                     </div>
-
+  
                 </div>
             </div>
-
+  
             <div class="container-statistics">
                 <div class="statistics-description"> 
-
+  
                     <div class="div-icon">
                         <mat-icon aria-hidden="false" aria-label="Example home icon">stars</mat-icon>
                     </div>
-
+  
                     <div class="div-label">
                         <mat-label>94</mat-label>    
                     </div>
                     
                 </div>
             </div>
-
+  
             <div class="container-statistics">
                 <div class="statistics-description">
-
+  
                     <div class="div-icon">
                         <mat-icon aria-hidden="false" aria-label="Example home icon">perm_identity</mat-icon>
                     </div>
-
+  
                     <div class="div-label">
                         <mat-label>94</mat-label>
                     </div>
                     
                 </div>
             </div>
+            </div>
+  
+            <div class="div-container-legend">
+              <mat-accordion class="mat-accordion">
+                <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                  <mat-expansion-panel-header >
+                    <mat-panel-title>
 
-        </mat-grid-tile>
+                      <div class="mat-icon-legend">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">sports_soccer</mat-icon>
+                      </div>
 
-        <mat-grid-tile [colspan]="4" [rowspan]="1" class="mat-grid-list-list_players">
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Avg total del equipo
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>El Avg del equipo es la suma del avg de cada jugador en el equipo dividido entre entre la cantidad de jugadores</p>
+                </mat-expansion-panel>
 
-            <button mat-button color="primary" class="button-list-players">Ver lista de jugadores</button>
+                <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <div class="mat-icon-legend">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">stars</mat-icon>
+                    </div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Puntos totales del equipo
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Los puntos del equipo es la suma de todos los puntos de cada jugador en el equipo dividido entre entre la cantidad de jugadores</p>
+                </mat-expansion-panel>
 
+                <mat-expansion-panel class="mat-expansion-panel" hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <div class="mat-icon-legend">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">perm_identity</mat-icon>
+                    </div>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Cantidad de jugadores en el equipo
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>Es la suma total de cuanto jugadores hay</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+  
+          </div>
         </mat-grid-tile>
 
     </mat-grid-list>
