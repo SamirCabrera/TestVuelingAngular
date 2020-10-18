@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { PlayerModel } from 'src/app/models/player.model';
+import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
   selector: 'app-players',
@@ -7,11 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayersComponent implements OnInit {
 
-  public tiles: any
+  public players: Array<PlayerModel>;
 
-  constructor() { }
+  constructor(private readonly playerService: PlayerService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+
+    this.getPlayers();
   }
 
+  private getPlayers(): void {
+
+    this.playerService.getPlayers().subscribe((players: Array<PlayerModel>) => {
+
+      this.players = players;
+    });
+  }
 }
