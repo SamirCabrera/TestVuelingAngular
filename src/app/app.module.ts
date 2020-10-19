@@ -9,13 +9,15 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PlayersComponent } from './pages/homepage/players/players.component';
 import { TeamsComponent } from './pages/homepage/teams/teams.component';
+import { DialogComponent } from './pages/homepage/teams/dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     PlayersComponent,
-    TeamsComponent
+    TeamsComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

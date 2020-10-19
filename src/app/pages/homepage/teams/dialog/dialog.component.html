@@ -1,0 +1,143 @@
+<div>
+    <button mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<h2 mat-dialog-title class="h2-title">Lista de jugadores</h2>
+
+<mat-dialog-content class="mat-typography">
+
+  <div class="div-mat-card" *ngFor="let player of players">
+
+    <mat-card class="mat-card-players">
+
+        <mat-grid-list cols="5" rowHeight="40px">
+
+            <mat-grid-tile [colspan]="1" [rowspan]="4">
+
+                <div class="avatar">
+                    <img src="{{player.picture}}" class="img">
+                </div>
+                
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="3" [rowspan]="1">
+
+                <div class="div-labels">
+                    <mat-label class="label-name_player">
+                        Nombre: {{ player.name }}
+                    </mat-label>
+                </div>
+
+            </mat-grid-tile>
+            
+
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                
+                <div class="div-team" *ngFor="let logo of teamLogo">
+                    <img src="assets/img/{{logo.id}}.png" class="img-team">
+                </div>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1" class="mat-grid-tiles-button-avg">
+                
+                <div class="div-labels">
+                    <mat-label class="label-name_player">
+                        Puntos: {{ player.points }}
+                    </mat-label>
+                </div>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1" class="mat-grid-tiles-button-avg">
+                
+                <div class="div-labels">
+                    <mat-label class="label-name_player">
+                        Avg: {{ player.avg }}
+                    </mat-label>
+                </div>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1" class="mat-grid-tiles-button-avg">
+                
+                <div class="div-labels">
+                    <mat-label class="label-name_player">
+                        Precio: {{ player.value }}
+                    </mat-label>
+                </div>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1" class="mat-grid-tiles-button-avg">
+                
+                <div class="div-labels">
+                    <mat-label class="label-name_player">
+                        Clausula: {{ player.clause }}
+                    </mat-label>
+                </div>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="1" class="mat-grid-tiles-button-avg">
+                
+                <div class="div-labels">
+                    <mat-label class="label-name_player">
+                        Precio carrera: {{ player.prevValue }}
+                    </mat-label>
+                </div>
+
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="2" [rowspan]="5" class="mat-grid-tiles-button-avg">
+                
+                <div class="div-labels">
+                    <mat-accordion>
+
+                        <mat-expansion-panel hideToggle>
+
+                          <mat-expansion-panel-header>
+
+                            <mat-panel-title>
+                              Ver detalles sobre la temporada
+                            </mat-panel-title>
+
+                          </mat-expansion-panel-header>
+
+                          <div *ngFor="let streak of player.streak" class="div-streak">
+
+                            <div class="div-labels">
+                                <mat-label class="label-streak">
+                                    Semana partido: {{ streak.gameweek }}
+                                </mat-label>
+                            </div>
+    
+                            <div class="div-labels">
+                                <mat-label class="label-streak">
+                                    Puntos: {{ streak.points }}
+                                </mat-label>
+                            </div>
+
+                          </div>
+
+                        </mat-expansion-panel>
+                      </mat-accordion>
+                </div>
+
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+    </mat-card>
+
+  </div>
+
+  <div *ngIf="players.length === 0">
+    <h1 class="h1-not-players">
+        No hay jugadores registrados en este equipo
+    </h1>
+  </div>
+
+</mat-dialog-content>

@@ -5,12 +5,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { PlayerModel } from 'src/app/models/player.model';
 import { PlayerService } from 'src/app/services/player.service';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
 @Component({
   selector: 'app-players',
   templateUrl: './players.component.html',
