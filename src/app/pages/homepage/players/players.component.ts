@@ -17,11 +17,8 @@ export class PlayersComponent implements OnInit {
 
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: false }) sort: MatSort;
-  
-  public dataSource:  MatTableDataSource<PlayerModel>;
+  public dataSource: MatTableDataSource<PlayerModel>;
   public displayedColumns: Array<string> = ['points'];
-
-  private players: Array<PlayerModel>;
 
   constructor(private readonly playerService: PlayerService,
               private readonly teamService: TeamService,
@@ -40,10 +37,9 @@ export class PlayersComponent implements OnInit {
 
   public viewDetailPlayer(player: PlayerModel): any {
 
-    let playerSelected: Array<PlayerModel> = [];
+    const playerSelected: Array<PlayerModel> = Array<PlayerModel>();
     playerSelected.push(player);
-    this.dialog.open(DialogComponent, {height:'60%',width:'35%', data: playerSelected});
-
+    this.dialog.open(DialogComponent, {height: '60%', width: '35%', data: playerSelected});
   }
 
   private getPlayers(): void {
@@ -53,8 +49,6 @@ export class PlayersComponent implements OnInit {
       this.dataSource = new MatTableDataSource<PlayerModel>(players);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-      this.players = players
     });
   }
-
 }
