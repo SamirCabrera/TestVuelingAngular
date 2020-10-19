@@ -6,6 +6,7 @@ import { TeamModel } from 'src/app/models/team.model';
 import { PlayerService } from 'src/app/services/player.service';
 import { TeamService } from 'src/app/services/team.service';
 import { DialogComponent } from './dialog/dialog.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-teams',
@@ -26,7 +27,8 @@ export class TeamsComponent implements OnInit {
 
   constructor(private readonly teamService: TeamService,
               private readonly playerService: PlayerService,
-              public dialog: MatDialog) { }
+              private readonly dialog: MatDialog,
+              private readonly translate: TranslateService) { }
 
   public ngOnInit(): void {
 
@@ -73,23 +75,23 @@ export class TeamsComponent implements OnInit {
     });
   }
 
-  private intializeCaption(): void {
+  private async intializeCaption(): Promise<void> {
     this.captions = [
       {
         icon: 'sports_soccer',
-        title: 'Avg total del equipo',
-        description: 'El Avg del equipo es la suma del avg de cada jugador en el equipo dividido entre entre la cantidad de jugadores'
+        title: await this.translate.get('AVG_TOTAL_TEAM').toPromise(),
+        description: await this.translate.get('AVG_TOTAL_TEAM_DESCRIPTION').toPromise(),
       },
       {
         icon: 'stars',
-        title: 'Puntos totales del equipo',
-        description: 'Los puntos del equipo es la suma de todos los puntos de cada jugador en el equipo dividido entre entre la cantidad de jugadores'
+        title: await this.translate.get('POINT_TOTAL_TEAM').toPromise(),
+        description: await this.translate.get('POINT_TOTAL_TEAM_DESCRIPTION').toPromise(),
       },
       {
         icon: 'perm_identity',
-        title: 'Cantidad de jugadores en el equipo',
-        description: 'Es la suma total de cuanto jugadores hay'
+        title: await this.translate.get('PLAYER_TOTAL_TEAM').toPromise(),
+        description: await this.translate.get('PLAYER_TOTAL_TEAM_DESCRIPTION').toPromise(),
       }
-    ]
+    ];
   } 
 }

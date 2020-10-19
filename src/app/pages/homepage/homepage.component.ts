@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  value = '';
-
   constructor() { }
 
   ngOnInit(): void {

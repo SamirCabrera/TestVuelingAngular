@@ -4,13 +4,14 @@ import { AngularMaterialModule } from '../../angular-material/angular-material.m
 import { PlayersComponent } from './players/players.component';
 import { TeamsComponent } from './teams/teams.component';
 import { DialogComponent } from './teams/dialog/dialog.component';
-import { DialogDetailPlayerComponent } from './players/dialog-detail-player/dialog-detail-player.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
-  declarations: [PlayersComponent, TeamsComponent, DialogComponent, DialogDetailPlayerComponent],
+  declarations: [PlayersComponent, TeamsComponent, DialogComponent],
   imports: [
     CommonModule,
     AngularMaterialModule,
+    TranslateModule
   ],
   entryComponents: [DialogComponent]
 })

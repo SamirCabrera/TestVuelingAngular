@@ -4,7 +4,9 @@
     </button>
 </div>
 
-<h2 mat-dialog-title class="h2-title">Lista de jugadores</h2>
+<h2 mat-dialog-title class="h2-title">
+    {{ 'LIST_PLAYER' | translate }}
+</h2>
 
 <mat-dialog-content>
 
@@ -26,7 +28,7 @@
 
                 <div class="div-labels">
                     <mat-label class="label-name_player">
-                        Nombre: {{ player.name }}
+                        {{ 'NAME' | translate }}: {{ player.name }}
                     </mat-label>
                 </div>
 
@@ -45,7 +47,7 @@
                 
                 <div class="div-labels">
                     <mat-label class="label-name_player">
-                        Puntos: {{ player.points }}
+                        {{ 'POINT' | translate }}: {{ player.points }}
                     </mat-label>
                 </div>
 
@@ -55,7 +57,7 @@
                 
                 <div class="div-labels">
                     <mat-label class="label-name_player">
-                        Avg: {{ player.avg }}
+                        {{ 'AVG' | translate }}: {{ player.avg }}
                     </mat-label>
                 </div>
 
@@ -65,7 +67,7 @@
                 
                 <div class="div-labels">
                     <mat-label class="label-name_player">
-                        Precio: {{ player.value }}
+                        {{ 'VALUE' | translate }}: {{ player.value }}
                     </mat-label>
                 </div>
 
@@ -75,7 +77,7 @@
                 
                 <div class="div-labels">
                     <mat-label class="label-name_player">
-                        Clausula: {{ player.clause }}
+                        {{ 'CLAUSE' | translate }}: {{ player.clause }}
                     </mat-label>
                 </div>
 
@@ -85,7 +87,7 @@
                 
                 <div class="div-labels">
                     <mat-label class="label-name_player">
-                        Precio carrera: {{ player.prevValue }}
+                        {{ 'RACE_VALUE' | translate }}: {{ player.prevValue }}
                     </mat-label>
                 </div>
 
@@ -101,7 +103,7 @@
                           <mat-expansion-panel-header>
 
                             <mat-panel-title>
-                              Ver detalles sobre la temporada
+                                {{ 'SEE_DETAILS_SEASON' | translate }}
                             </mat-panel-title>
 
                           </mat-expansion-panel-header>
@@ -110,13 +112,13 @@
 
                             <div class="div-labels">
                                 <mat-label class="label-streak">
-                                    Semana partido: {{ streak.gameweek }}
+                                    {{ 'GAMEWEEK' | translate }}: {{ streak.gameweek }}
                                 </mat-label>
                             </div>
     
                             <div class="div-labels">
                                 <mat-label class="label-streak">
-                                    Puntos: {{ streak.points }}
+                                    {{ 'POINT' | translate }}: {{ streak.points }}
                                 </mat-label>
                             </div>
 
@@ -136,7 +138,7 @@
 
   <div *ngIf="players.length === 0">
     <h1 class="h1-not-players">
-        No hay jugadores registrados en este equipo
+        {{ 'NOT_PLAYER' | translate }}
     </h1>
   </div>
 

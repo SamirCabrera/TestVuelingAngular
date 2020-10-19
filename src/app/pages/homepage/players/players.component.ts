@@ -21,8 +21,6 @@ export class PlayersComponent implements OnInit {
   public dataSource:  MatTableDataSource<PlayerModel>;
   public displayedColumns: Array<string> = ['points'];
 
-  private players: Array<PlayerModel>;
-
   constructor(private readonly playerService: PlayerService,
               private readonly teamService: TeamService,
               public dialog: MatDialog) { }
@@ -42,8 +40,7 @@ export class PlayersComponent implements OnInit {
 
     let playerSelected: Array<PlayerModel> = [];
     playerSelected.push(player);
-    this.dialog.open(DialogComponent, {height:'60%',width:'35%', data: playerSelected});
-
+    this.dialog.open(DialogComponent, {height: '60%', width: '35%', data: playerSelected});
   }
 
   private getPlayers(): void {
@@ -53,8 +50,6 @@ export class PlayersComponent implements OnInit {
       this.dataSource = new MatTableDataSource<PlayerModel>(players);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-      this.players = players
     });
   }
-
 }
