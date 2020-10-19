@@ -11,7 +11,8 @@
     border-radius: 6px;
     text-align: center;
     font-weight: bold;
-    margin: 8px 16px;
+    margin: 10px 50px;
+    padding: 8px 64px;
 }
 
 .mat-card-teams:hover {
@@ -20,9 +21,9 @@
 }
 
 ::ng-deep .mat-card-image {
-    width: 30% !important;
-    padding: 0px 55px;
+    width: 100% !important;
     transition: all 700ms;
+    margin: 20px 0px !important;
 }
 
 ::ng-deep .mat-card-image:hover {
@@ -30,17 +31,17 @@
     transition: all 700ms;
 }
 
+::ng-deep .mat-card-header .mat-card-title {
+    margin: 8px;
+}
+
 .container-card {
-    display: flex;
+    display: -webkit-box;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 208px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
     justify-content: center;
-    width: 70%;
+    width: 100%;
     height: 100%;
 }
 
@@ -152,4 +153,12 @@
 
 ::ng-deep .mat-expansion-panel-header-description {
     flex-grow: 54 !important;
+}
+
+.mat-card-title-label {
+    font-size: 16px;
+}
+
+.mat-card-headers {
+    justify-content: center;
 }

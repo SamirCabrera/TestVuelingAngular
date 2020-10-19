@@ -2,211 +2,21 @@
 
     <mat-grid-list cols="4" rowHeight="100px">
 
-        <mat-grid-tile [colspan]="3" [rowspan]="7" class="mat-grid-list-card">
+        <mat-grid-tile [colspan]="3" [rowspan]="8" class="mat-grid-list-card">
 
             <div class="container-card">
 
-                <mat-card class="mat-card-teams">
-                    <mat-card-header>
+                <mat-card *ngFor="let team of teams" (click)="teamSelected(team.id)" class="mat-card-teams">
+                    <mat-card-header class="mat-card-headers">
     
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-    
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
+                      <mat-card-title class="mat-card-title-label">{{ team.name }}</mat-card-title>
     
                     </mat-card-header>
     
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
+                    <img mat-card-image src="assets/img/{{team.id}}.png" alt="Photo of a Shiba Inu">
 
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
                 </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
     
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-
-                <mat-card class="mat-card-teams">  
-                    <mat-card-header>
-    
-                      <mat-card-title>Real Madrid</mat-card-title>
-    
-                    </mat-card-header>
-    
-                    <img mat-card-image src="../../../../assets/img/Real-madrid.png" alt="Photo of a Shiba Inu">
-                </mat-card>
-                
-
             </div>
 
         </mat-grid-tile>
@@ -223,7 +33,7 @@
                     </div>
   
                     <div class="div-label">
-                        <mat-label>94</mat-label>
+                        <mat-label>{{ totalAvg }}</mat-label>
                     </div>
   
                 </div>
@@ -237,7 +47,7 @@
                     </div>
   
                     <div class="div-label">
-                        <mat-label>94</mat-label>    
+                        <mat-label>{{ totalPoints }}</mat-label>    
                     </div>
                     
                 </div>
@@ -251,7 +61,7 @@
                     </div>
   
                     <div class="div-label">
-                        <mat-label>94</mat-label>
+                        <mat-label>{{ totalPlayers }}</mat-label>
                     </div>
                     
                 </div>

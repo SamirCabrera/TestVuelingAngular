@@ -26,6 +26,6 @@ export abstract class BaseModel {
     }
 }
 
-BaseModel.jsonConvert.operationMode = environment.production ? OperationMode.ENABLE : OperationMode.LOGGING;
+BaseModel.jsonConvert.operationMode = environment.production ? OperationMode.ENABLE : OperationMode.ENABLE;
 BaseModel.jsonConvert.ignorePrimitiveChecks = false;
 BaseModel.jsonConvert.valueCheckingMode = ValueCheckingMode.DISALLOW_NULL;

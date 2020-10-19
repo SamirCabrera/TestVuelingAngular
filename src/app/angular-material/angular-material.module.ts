@@ -16,6 +16,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
 
 
 @NgModule({
@@ -37,10 +38,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ReactiveFormsModule,
     MatExpansionModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports: [MatCardModule, MatButtonModule, MatGridListModule, MatTabsModule, MatToolbarModule,
             MatInputModule, MatIconModule, MatFormFieldModule, FormsModule, MatCheckboxModule,
-            MatSelectModule, ReactiveFormsModule, MatExpansionModule, MatTableModule, MatPaginatorModule]
+            MatSelectModule, ReactiveFormsModule, MatExpansionModule, MatTableModule, MatPaginatorModule, MatSortModule]
 })
 export class AngularMaterialModule { }

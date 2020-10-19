@@ -1,44 +1,19 @@
-<div>
-    
-    <mat-grid-list cols="3" rowHeight="96px" class="grid-list">
+<mat-grid-list cols="3" rowHeight="96px" class="grid-list">
 
-        <mat-grid-tile [colspan]="3" [rowspan]="1" class="grid-tile-search">
+    <mat-grid-tile [colspan]="3" [rowspan]="9" class="grid-tile-tab">
 
-            <mat-form-field class="form-field">
+        <mat-tab-group class="mat-tab-group" mat-align-tabs="center">
 
-                <mat-label>Ingresa una busqueda</mat-label>
+            <mat-tab label="Equipos">
+                <app-teams></app-teams>
+            </mat-tab>
 
-                <input matInput type="text" [(ngModel)]="value">
+            <mat-tab label="Jugadores">
+                <app-players></app-players>
+            </mat-tab>
+            
+        </mat-tab-group>
 
-                <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                  <mat-icon>close</mat-icon>
-                </button>
+    </mat-grid-tile>
 
-            </mat-form-field>
-
-            <button mat-button color="primary">Buscar</button>
-
-        </mat-grid-tile>
-
-
-        <mat-grid-tile [colspan]="3" [rowspan]="8" class="grid-tile-tab">
-
-            <mat-tab-group class="mat-tab-group" mat-align-tabs="center">
-
-                <mat-tab label="Equipos">
-                    <app-teams></app-teams>
-                </mat-tab>
-
-                <mat-tab label="Jugadores">
-                    <app-players></app-players>
-                </mat-tab>
-
-                <mat-tab label="Ranking Jugadores "> Ranking Jugadores </mat-tab>
-                <mat-tab label="Ranking Equipos "> Ranking Equipos </mat-tab>
-            </mat-tab-group>
-
-        </mat-grid-tile>
-
-    </mat-grid-list>
-
-</div>
+</mat-grid-list>
