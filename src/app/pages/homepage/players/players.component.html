@@ -38,7 +38,7 @@
                         <mat-grid-tile [colspan]="1" [rowspan]="1">
                             
                             <div class="div-team">
-                                <img src="assets/img/Real-madrid.png" class="img-team">
+                                <img src="assets/img/{{element.idTeam}}.png" class="img-team">
                             </div>
             
                         </mat-grid-tile>
@@ -56,7 +56,7 @@
                         <mat-grid-tile [colspan]="2" [rowspan]="1" class="mat-grid-tiles-button-avg">
             
                             <div class="div-button">
-                                <button mat-button color="primary" class="button-see-more">Ver mas</button>
+                                <button mat-button color="primary" class="button-see-more" (click)="viewDetailPlayer(element)">Ver mas</button>
                             </div>
             
                         </mat-grid-tile>

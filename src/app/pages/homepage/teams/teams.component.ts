@@ -53,10 +53,8 @@ export class TeamsComponent implements OnInit {
   }
 
   public viewTeamPlayers(): void {
-    const dialogRef = this.dialog.open(DialogComponent, {height:'80%',width:'80%', data: this.teamPlayers});
-
-    dialogRef.afterClosed().subscribe(result => {
-    });
+    
+    this.dialog.open(DialogComponent, {height:'80%',width:'50%', data: this.teamPlayers});
   }
 
   private getTeams(): void {

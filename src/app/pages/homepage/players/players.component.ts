@@ -1,9 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { PlayerModel } from 'src/app/models/player.model';
 import { PlayerService } from 'src/app/services/player.service';
+import { TeamService } from 'src/app/services/team.service';
+import { DialogComponent } from '../teams/dialog/dialog.component';
 
 @Component({
   selector: 'app-players',
@@ -18,7 +21,11 @@ export class PlayersComponent implements OnInit {
   public dataSource:  MatTableDataSource<PlayerModel>;
   public displayedColumns: Array<string> = ['points'];
 
-  constructor(private readonly playerService: PlayerService) { }
+  private players: Array<PlayerModel>;
+
+  constructor(private readonly playerService: PlayerService,
+              private readonly teamService: TeamService,
+              public dialog: MatDialog) { }
 
   public ngOnInit(): void {
 
@@ -31,6 +38,14 @@ export class PlayersComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  public viewDetailPlayer(player: PlayerModel): any {
+
+    let playerSelected: Array<PlayerModel> = [];
+    playerSelected.push(player);
+    this.dialog.open(DialogComponent, {height:'60%',width:'35%', data: playerSelected});
+
+  }
+
   private getPlayers(): void {
 
     this.playerService.getPlayers().subscribe((players: Array<PlayerModel>) => {
@@ -38,6 +53,8 @@ export class PlayersComponent implements OnInit {
       this.dataSource = new MatTableDataSource<PlayerModel>(players);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      this.players = players
     });
   }
+
 }
